@@ -1,0 +1,209 @@
+Answers:
+
+1.
+a =5
+b =6
+c =a+b
+
+2.
+
+'2' + '5' produces '25'
+
+3.
+pi = 3.14
+area = pi*3*3
+perimeter =2*pi*3
+
+4.
+x = 123446754336788543835697
+y = 3.14159265358979323846
+x =float(x)
+y =int(y)
+
+5.
+foobar ='"No, thanks, Mom,\" I said, \"I don't know how long it will take."'
+
+6.
+# Assign 'HelloWorld!' to variable a
+a = 'HelloWorld!'
+
+# b contains 'HelloWorld!HelloWorld!HelloWorld!HelloWorld!HelloWorld!'
+b = 
+7.
+greeting = "Hello Google!"
+# number of characters stored in the variable greeting
+number_of_char =len(greeting)
+
+# repeat the greetings based on the number of character in 'greeting'
+greetings=greeting*number_of_char
+8.
+# Write a function, given a string of characters, return the string together with '_'s of the same length.
+def underline(title):
+    return title + '\n' + len(title) * '_'
+9.
+# Use one or more string methods in above examples, extract the substring
+# surrounded by 'xyz' at the beginning and end. Replace the ',' in the substring with '|'.
+# and remove all trailing space.
+
+str1  = 'abcefghxyzThis,is,the,target,string  xyzlkdjf'
+idx1 = str1.find('xyz')                    # get the position of 'xyz'
+idx2 = str1.find('xyz'  , idx1+1)            # get the next 'xyz'
+str1 = str1[idx1+3:idx2].replace(',','|'  )    # replace ',' with '|'
+str1 = str1.strip()                           # strip trailing spaces. 
+
+10.
+# Assign arbitrary values to the variables such that they are of the types used in the examples
+a = 'str'
+b = 1
+c = 12.345
+d = [10,20,30]
+
+11.
+B and D
+
+12.
+# Compute the sum and product of 2 complex numbers:
+# (2+3j) and (4+5j)
+a = (2+3j)
+b = (4+5j)
+sum_ab = a+b
+prod_ab = a*b
+
+13.
+# Write a function that does a decimal to hexadecimal conversion.
+# Hint: Make use of "%x" for hexadecimal format.
+def dec2hex(num):return str('0x' + '%.2x' % num)
+14.
+# Extract each word from 'greetings' and assign to 
+# variables 'first', 'middle' and 'last'.
+greetings = "How are you"
+first  = greetings[0 :3 ]
+middle = greetings[ 4:7 ]
+last   = greetings[8 :11 ]
+
+15.
+a = 25
+b = int(031)
+c = int(0x19)
+16.
+
+x = 1, y = 4
+
+17.
+<type 'int'>
+18.
+True
+
+Part 2: Answers:
+
+1.
+def addNumber(x, y): return x+y;
+2.
+def subtractNumber(x, y): return x-y;
+3.
+def getBiggerNumber(x,y):
+if x>y:
+return x;
+else:
+return y;
+4.
+import math
+# Calculate the square root of 16 and stores it in the variable a
+a =math.sqrt(16)
+
+# Calculate 3 to the power of 5 and stores it in the variable b
+b =math.pow(3,5)
+
+# Calculate area of circle with radius = 3.0 by making use of the math.pi constant and store it in the variable c
+c = math.pi*3.0*3.0
+
+5.
+def Cel2Fah(temp):
+	
+	Fah = temp * 9 / 5 + 32
+	Fah = float(Fah)
+	Fah_string = str(Fah)
+        a = Fah_string.split('.')
+        b = a[1][0:2]
+        if len(b) < 2:
+        	b = b + '0'
+        elif len(b) > 2:
+        	b = float(b)
+        	b = round(b)
+        	b = str(b)
+                b = b[0:2]
+        c = a[0]
+        f = str(c) + '.' + str(b)
+        return f
+6.
+def BMI(weight, height): 
+	b = float(weight) / (float(height) * float(height))
+	c = '%.1f' % b
+	return c
+7.
+def percent(x,y): return int((float(x) / y) * 100)
+8.
+import math
+def hypotenuse(a, b): 
+	x=(a*a)+(b*b)
+
+	return math.sqrt(x);
+9. return sum(x % 10 for x in numList)
+
+
+10.
+def introduce(name, age=0):
+    msg = "My name is %s. " % name
+    if age == 0:
+       msg += "My age is secret."
+    else:
+       msg += "I am %s" % age +  " years old."
+    return msg 
+
+
+11.
+def isEquilateral(x, y, z): 
+	if x == y and x == z and x>0:
+		return True;
+	else:
+		return False;
+12.
+def quadrtic(a,b,c):
+   d = b**2 - 4*a*c
+   if d < 0:
+       return "This equation has 2 complex roots."
+   elif d > 0:
+       return "This equation has 2 real roots."
+   else:  # d == 0
+       return "This equation has 1 real root."
+
+13.
+def add_first_and_last(input_list):
+    result_list=list()
+    for number in input_list:
+        printed=str(number)
+        result_list.append(printed[0]+printed[-1])
+    return result_list
+14.
+even = lambda x: x % 2 == 0
+15.
+def getScore(data):
+	“”” A function that computes and returns the final score.”””
+      Print “ getscore”
+16.
+def addOne(x):
+        return x + 1
+def useFunction(addone, x): 
+        return addOne(x)**2
+
+
+17.
+import math
+def calDistance (x1, y1, x2, y2):
+	x = math.pow((x2-x1), 2)
+	y = math.pow((y2-y1), 2)
+	z = math.pow((x + y), 0.5)
+	return z
+
+
+
